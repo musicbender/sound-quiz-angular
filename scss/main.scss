@@ -1,7 +1,7 @@
 /*******Imports*******/
 
-@import '_variables.scss';
-@import '_placeholders.scss';
+@import 'helpers/_variables.scss';
+@import 'helpers/_placeholders.scss';
 
 /*******General*******/
 
@@ -201,4 +201,4 @@ h3 {
 
 /*******Media Queries*******/
 
-@import '_media-queries.scss';
+@import 'media/_media-queries.scss';

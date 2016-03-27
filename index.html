@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-app="myApp">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -8,16 +8,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+        <link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
         <link rel="stylesheet" href="build/build.css" />
         <script src="build/vendor/custom-modernizr.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <!-- if AngularJS fails to load fallback a local version -->
+        <script>window.angular || document.write('<script src="build/vendor/angular.min.js"><\/script>');</script>
 
     </head>
-    <body>
+    <body ng-controller="mainCtrl">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <header>
+            <h1>What is that Sound?</h1>
+        </header>
+        <section class="progress">
+            <h4 class="sound-number">Sound <span class="num-change">1</span> out of 10</h4>
+            <h4 class="score-section"><span class="score">0</span> out of 10 Correct</h4>
+        </section>
 
-       <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!--audio section here-->
+
+        <section class="start" ng-controller="startCtrl">
+            <div ng-click="" class="start-btn">
+                <h3>Start</h3>
+            </div>
+        </section>
+
+        <section class="test-angular" ng-controller="answersCtrl">
+            <answers></answers>
+        </section>
+
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="build/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="build/build.js"></script>
     </body>

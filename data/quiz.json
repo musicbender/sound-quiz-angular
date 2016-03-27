@@ -1,0 +1,194 @@
+{
+    "data": [
+        {
+            "box1": {
+                "answer": "Rubbing Glass Bowl",
+                "correct": false
+            },
+            "box2": {
+                "answer": "Bottom of Beer Bottle",
+                "correct": true
+            },
+            "box3": {
+                "answer": "Cotton Candy Machine",
+                "correct": false
+            },
+            "box4": {
+                "answer": "Giant Penny",
+                "correct": false
+            },
+            "audio": "audio/sound1.mp3"
+        },
+        {
+            "box1": {
+                "answer": "Wind",
+                "correct": false
+            },
+            "box2": {
+                "answer": "Falling Rocks",
+                "correct": false
+            },
+            "box3": {
+                "answer": "Coffee Grinder",
+                "correct": true
+            },
+            "box4": {
+                "answer": "Radio Static",
+                "correct": false
+            },
+            "audio": "audio/sound2.mp3"
+        },
+        {
+            "box1": {
+                "answer": "Alien Muppets",
+                "correct": false
+            },
+            "box2": {
+                "answer": "Wildebeests",
+                "correct": true
+            },
+            "box3": {
+                "answer": "Frog Business Meeting",
+                "correct": false
+            },
+            "box4": {
+                "answer": "Toy Store",
+                "correct": false
+            },
+            "audio": "audio/sound3.mp3"
+        },
+        {
+            "box1": {
+                "answer": "Big Drum",
+                "correct": false
+            },
+            "box2": {
+                "answer": "Canon",
+                "correct": false
+            },
+            "box3": {
+                "answer": "Hans Zimmer Coughing",
+                "correct": false
+            },
+            "box4": {
+                "answer": "Slamming Car Door",
+                "correct": true
+            },
+            "audio": "audio/sound4.mp3"
+        },
+        {
+            "box1": {
+                "answer": "Scraping a Comb",
+                "correct": true
+            },
+            "box2": {
+                "answer": "Praying Mantis",
+                "correct": false
+            },
+            "box3": {
+                "answer": "Velcro",
+                "correct": false
+            },
+            "box4": {
+                "answer": "Alien Transmission",
+                "correct": false
+            },
+            "audio": "audio/sound5.mp3"
+        },
+        {
+            "box1": {
+                "answer": "Dentist",
+                "correct": false
+            },
+            "box2": {
+                "answer": "8-bit Arcade Game",
+                "correct": false
+            },
+            "box3": {
+                "answer": "Tiny Motor Boat",
+                "correct": false
+            },
+            "box4": {
+                "answer": "Grinding a Break Drum",
+                "correct": true
+            },
+            "audio": "audio/sound6.mp3"
+        },
+        {
+            "box1": {
+                "answer": "Tightening a Bow String",
+                "correct": false
+            },
+            "box2": {
+                "answer": "Bobcat Purring",
+                "correct": false
+            },
+            "box3": {
+                "answer": "Rusty Door",
+                "correct": false
+            },
+            "box4": {
+                "answer": "Rubbing a Baloon",
+                "correct": true
+            },
+            "audio": "audio/sound7.mp3"
+        },
+        {
+            "box1": {
+                "answer": "Train Bell",
+                "correct": false
+            },
+            "box2": {
+                "answer": "Opening Large Garage",
+                "correct": false
+            },
+            "box3": {
+                "answer": "Scraping Fence Posts",
+                "correct": true
+            },
+            "box4": {
+                "answer": "Dinner-time Triangle",
+                "correct": false
+            },
+            "audio": "audio/sound8.mp3"
+        },
+        {
+            "box1": {
+                "answer": "Cooking Blueberries",
+                "correct": true
+            },
+            "box2": {
+                "answer": "Plastic Wrap",
+                "correct": false
+            },
+            "box3": {
+                "answer": "Steam Roller",
+                "correct": false
+            },
+            "box4": {
+                "answer": "Radio Transmission",
+                "correct": false
+            },
+            "audio": "audio/sound9.mp3"
+        },
+        {
+            "box1": {
+                "answer": "Drainage Pipes",
+                "correct": false
+            },
+            "box2": {
+                "answer": "Steaming Milk",
+                "correct": true
+            },
+            "box3": {
+                "answer": "Tiny Racecar",
+                "correct": false
+            },
+            "box4": {
+                "answer": "Horcrux",
+                "correct": false
+            },
+            "audio": "audio/sound10.mp3"
+        }
+    ]
+}

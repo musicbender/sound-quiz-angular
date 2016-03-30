@@ -25,22 +25,27 @@
         <header>
             <h1>What is that Sound?</h1>
         </header>
-        <section class="progress">
-            <h4 class="sound-number">Sound <span class="num-change">1</span> out of 10</h4>
-            <h4 class="score-section"><span class="score">0</span> out of 10 Correct</h4>
-        </section>
-
-        <!--audio section here-->
-
-        <section class="start" ng-controller="startCtrl">
-            <div ng-click="" class="start-btn">
+        <!--start button-->
+        <section class="start" ng-controller="startCtrl" ng-hide="quizHasBegun">
+            <div ng-click="startQuiz()" class="start-btn">
                 <h3>Start</h3>
             </div>
         </section>
 
-        <section class="test-angular" ng-controller="answersCtrl">
-            <answers></answers>
-        </section>
+        <div class="quiz-container" ng-show="quizHasBegun">
+            <section class="progress">
+                <h4 class="sound-number">Sound <span class="num-change">1</span> out of 10</h4>
+                <h4 class="score-section"><span class="score">0</span> out of 10 Correct</h4>
+            </section>
+
+            <!--audio section here-->
+
+
+
+            <section class="answers-sect" ng-controller="answersCtrl">
+                <answers></answers>
+            </section>
+        </div>
 
 
 

@@ -28,7 +28,6 @@ h1 {
 
 /*******Progress Section*******/
 .progress {
-  display: none;
   margin: 0px auto;
   padding: 0;
   width: 50%;
@@ -52,7 +51,6 @@ h1 {
 
 /*******Audio Section*******/
 .audio-section {
-  display: none;
   margin: 0 auto;
   width: 50%;
   height: 66px;
@@ -102,25 +100,12 @@ h3 {
   vertical-align: middle; }
 
 /*******Answers Section*******/
-.answers {
-  display: none;
+.answers-sect {
   margin: 30px auto;
   width: 50%;
   height: 300px; }
 
-.group-1,
-.group-2,
-.group-3,
-.group-4,
-.group-5,
-.group-6,
-.group-7,
-.group-8,
-.group-9,
-.group-10 {
-  display: none; }
-
-.container {
+.group {
   margin: 0 auto;
   padding: 0;
   width: 100%;

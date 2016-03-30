@@ -17,11 +17,11 @@ app.controller('startCtrl', ['$scope', function($scope) {
     }
 }]);
 
-app.controller('audioCtrl', ['$scope', function($scope) {
+app.controller('scoreCtrl', ['$scope', function($scope) {
 
 }]);
 
-app.controller('scoreCtrl', ['$scope', function($scope) {
+app.controller('audioCtrl', ['$scope', function($scope) {
 
 }]);
 
@@ -29,10 +29,26 @@ app.controller('answersCtrl', ['$scope', function($scope) {
 
 }]);
 
-app.directive('answers', function() {
+app.directive('scoreSection', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'templates/score.html'
+    }
+});
+
+app.directive('audioSection', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'templates/audio.html'
+    }
+});
+
+app.directive('answersSection', function() {
     return {
         restrict: 'E',
         templateUrl: 'templates/answers.html'
     }
 });
+
+
 

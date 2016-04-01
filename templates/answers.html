@@ -1,18 +1,18 @@
 <div class="answers-sect">
    <div class="row">
        <div class="answer-box left" ng-click="answers.checkAnswer()">
-           <p>{{ answer.quiz }}</p>
+           <p>{{ answers.quiz.box.box1.answer }}</p>
        </div>
        <div class="answer-box right" ng-click="answers.checkAnswer()">
-           <p>{{ quiz.data[quizNum].box2.answer }}</p>
+           <p>{{ answers.quiz.box.box2.answer }}</p>
        </div>
    </div>
    <div class="row">
        <div class="answer-box left" ng-click="answers.checkAnswer()">
-           <p>{{ quiz.data[quizNum].box3.answer }}</p>
+           <p>{{ answers.quiz.box.box3.answer }}</p>
        </div>
        <div class="answer-box right" ng-click="answers.checkAnswer()">
-           <p>{{ quiz.data[quizNum].box4.answer }}</p>
+           <p>{{ answers.quiz.box.box4.answer }}</p>
        </div>
    </div>
 </div>

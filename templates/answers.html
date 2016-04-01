@@ -1,18 +1,18 @@
 <div class="answers-sect">
    <div class="row">
-       <div class="answer-box left" ng-click="answers.checkAnswer(answers.quiz.box.box1)">
-           <p>{{ answers.quiz.box.box1.answer }}</p>
+       <div class="answer-box left" ng-click="answers.checkAnswer(answers.quiz.quizData.data[answers.quiz.quizNum].box1)">
+           <p>{{ answers.quiz.quizData.data[answers.quiz.quizNum].box1.answer }}</p>
        </div>
-       <div class="answer-box right" ng-click="answers.checkAnswer(answers.quiz.box.box2)">
-           <p>{{ answers.quiz.box.box2.answer }}</p>
+       <div class="answer-box right" ng-click="answers.checkAnswer(answers.quiz.quizData.data[answers.quiz.quizNum].box2)">
+           <p>{{ answers.quiz.quizData.data[answers.quiz.quizNum].box2.answer }}</p>
        </div>
    </div>
    <div class="row">
-       <div class="answer-box left" ng-click="answers.checkAnswer(answers.quiz.box.box3)">
-           <p>{{ answers.quiz.box.box3.answer }}</p>
+       <div class="answer-box left" ng-click="answers.checkAnswer(answers.quiz.quizData.data[answers.quiz.quizNum].box3)">
+           <p>{{ answers.quiz.quizData.data[answers.quiz.quizNum].box3.answer }}</p>
        </div>
-       <div class="answer-box right" ng-click="answers.checkAnswer(answers.quiz.box.box4)">
-           <p>{{ answers.quiz.box.box4.answer }}</p>
+       <div class="answer-box right" ng-click="answers.checkAnswer(answers.quiz.quizData.data[answers.quiz.quizNum].box4)">
+           <p>{{ answers.quiz.quizData.data[answers.quiz.quizNum].box4.answer }}</p>
        </div>
    </div>
 </div>

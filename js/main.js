@@ -52,6 +52,7 @@ app.controller('AnswersCtrl', ['quiz', function(quiz) {
     vm.checkAnswer = function(thisBox) {
         if (thisBox.correct) {
             vm.quiz.score++;
+            vm.quiz.quizNum++;
             console.log('Correct answer! Score: ' + vm.quiz.score);
         } else {
             console.log('Wrong Answer');

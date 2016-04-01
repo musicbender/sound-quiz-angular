@@ -36,7 +36,6 @@ app.controller('StartCtrl', ['quiz', function(quiz) {
 
 app.controller('ScoreCtrl', ['quiz', function(quiz) {
     var vm = this;
-    
     vm.quiz = quiz;
 }]);
 

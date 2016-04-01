@@ -1,32 +1,49 @@
 var app = angular.module('myApp', []);
 
-app.controller('mainCtrl', ['$scope', '$http', function($scope, $http) {
+app.service('quizService', ['$http', function($http) {
+    var vm = this;
+
     $http.get('data/quiz.json').then(function(response) {
-        $scope.quiz = response.data;
+        vm.quiz = response.data;
     });
-    $scope.quizNum = 0;
-    $scope.audioNum = 0;
-    $scope.score = 0;
-    $scope.quizHasBegun = false;
-}]);
-
-app.controller('startCtrl', ['$scope', function($scope) {
-    $scope.startQuiz = function () {
-        $scope.$parent.quizHasBegun = true;
-        console.log($scope.quizHasBegun);
+    vm.quizNum = 0;
+    vm.audioNum = 0;
+    vm.score = 0;
+    vm.inProgress = false;
+    vm.quizOver = false;
+    vm.startQuiz = function () {
+        vm.inProgress = true;
+        console.log('TEST: start button clicked. ' + vm.inProgress);
     }
-}]);
-
-app.controller('scoreCtrl', ['$scope', function($scope) {
 
 }]);
 
-app.controller('audioCtrl', ['$scope', function($scope) {
+app.controller('MainCtrl', ['$http', 'quizService', function($http, quizService) {
+    var vm = this;
+    vm.inProgress = quizService.inProgress;
 
 }]);
 
-app.controller('answersCtrl', ['$scope', function($scope) {
+app.controller('StartCtrl', ['quizService', function(quizService) {
+    var vm = this;
+    vm.startQuiz = quizService.startQuiz;
 
+}]);
+
+app.controller('ScoreCtrl', [function() {
+
+}]);
+
+app.controller('AudioCtrl', [function() {
+
+}]);
+
+app.controller('AnswersCtrl', ['quizService', function(quizService) {
+    var vm = this;
+    vm.quiz = quizService.quiz;
+    vm.checkAnswer = function() {
+        console.log('TEST: clicked answer');
+    }
 }]);
 
 app.directive('scoreSection', function() {

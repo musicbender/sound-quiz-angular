@@ -1,17 +1,17 @@
 <div class="answers-sect">
    <div class="row">
-       <div class="answer-box left">
-           <p>{{ quiz.data[quizNum].box1.answer }}</p>
+       <div class="answer-box left" ng-click="answers.checkAnswer()">
+           <p>{{ answer.quiz }}</p>
        </div>
-       <div class="answer-box right">
+       <div class="answer-box right" ng-click="answers.checkAnswer()">
            <p>{{ quiz.data[quizNum].box2.answer }}</p>
        </div>
    </div>
    <div class="row">
-       <div class="answer-box left">
+       <div class="answer-box left" ng-click="answers.checkAnswer()">
            <p>{{ quiz.data[quizNum].box3.answer }}</p>
        </div>
-       <div class="answer-box right">
+       <div class="answer-box right" ng-click="answers.checkAnswer()">
            <p>{{ quiz.data[quizNum].box4.answer }}</p>
        </div>
    </div>

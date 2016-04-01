@@ -51,8 +51,12 @@ app.controller('AnswersCtrl', ['quiz', function(quiz) {
     vm.quiz = quiz;
     vm.quizNum = quiz.quizNum;
     vm.checkAnswer = function(thisBox) {
-        
-        console.log('TEST: ' + thisBox.correct);
+        if (thisBox.correct) {
+            vm.quiz.score++;
+            console.log('Correct answer! Score: ' + vm.quiz.score);
+        } else {
+            console.log('Wrong Answer');
+        }
     }
 }]);
 

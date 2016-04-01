@@ -34,21 +34,25 @@ app.controller('StartCtrl', ['quiz', function(quiz) {
 
 }]);
 
-app.controller('ScoreCtrl', [function() {
-
+app.controller('ScoreCtrl', ['quiz', function(quiz) {
+    var vm = this;
+    
+    vm.quiz = quiz;
 }]);
 
-app.controller('AudioCtrl', [function() {
-
+app.controller('AudioCtrl', ['quiz', function(quiz) {
+    var vm = this;
+    
+    vm.quiz = quiz;
 }]);
 
 app.controller('AnswersCtrl', ['quiz', function(quiz) {
     var vm = this;
     vm.quiz = quiz;
     vm.quizNum = quiz.quizNum;
-    vm.checkAnswer = function() {
-        console.log('TEST: clicked answer. ' + vm.quizNum);
-        console.log(quiz.quizData);
+    vm.checkAnswer = function(thisBox) {
+        
+        console.log('TEST: ' + thisBox.correct);
     }
 }]);
 

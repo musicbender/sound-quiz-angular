@@ -1,32 +1,33 @@
 var app = angular.module('myApp', []);
 
-app.service('quizService', ['$http', function($http) {
+app.service('quiz', ['$http', function($http) {
     var vm = this;
 
     $http.get('data/quiz.json').then(function(response) {
-        vm.quiz = response.data;
+        vm.quizData = response.data;
     });
     vm.quizNum = 0;
     vm.audioNum = 0;
     vm.score = 0;
     vm.inProgress = false;
     vm.quizOver = false;
-    vm.startQuiz = function () {
+    vm.startQuiz = function (progress) {
         vm.inProgress = true;
         console.log('TEST: start button clicked. ' + vm.inProgress);
     }
 
 }]);
 
-app.controller('MainCtrl', ['$http', 'quizService', function($http, quizService) {
+app.controller('MainCtrl', ['$http', 'quiz', function($http, quiz) {
     var vm = this;
-    vm.inProgress = quizService.inProgress;
+    vm.quiz = quiz;
+
 
 }]);
 
-app.controller('StartCtrl', ['quizService', function(quizService) {
+app.controller('StartCtrl', ['quiz', function(quiz) {
     var vm = this;
-    vm.startQuiz = quizService.startQuiz;
+    vm.quiz = quiz;
 
 }]);
 
@@ -38,9 +39,9 @@ app.controller('AudioCtrl', [function() {
 
 }]);
 
-app.controller('AnswersCtrl', ['quizService', function(quizService) {
+app.controller('AnswersCtrl', ['quiz', function(quiz) {
     var vm = this;
-    vm.quiz = quizService.quiz;
+    vm.quizData = quiz.quizData;
     vm.checkAnswer = function() {
         console.log('TEST: clicked answer');
     }

@@ -26,13 +26,13 @@
             <h1>What is that Sound?</h1>
         </header>
         <!--start button-->
-        <section class="start" ng-controller="StartCtrl as start" ng-hide="main.inProgress">
-            <div ng-click="start.startQuiz()" class="start-btn">
+        <section class="start" ng-controller="StartCtrl as start" ng-hide="start.quiz.inProgress">
+            <div ng-click="start.quiz.startQuiz()" class="start-btn">
                 <h3>Start</h3>
             </div>
         </section>
 
-        <section class="quiz-container" ng-show="main.inProgress">
+        <section class="quiz-container" ng-show="main.quiz.inProgress">
             <score-section ng-controller="ScoreCtrl as score"></score-section>
 
             <audio-section ng-controller="AudioCtrl as audio"></audio-section>

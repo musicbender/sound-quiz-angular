@@ -41,22 +41,23 @@ app.controller('ScoreCtrl', ['quiz', function(quiz) {
 
 app.controller('AudioCtrl', ['quiz', function(quiz) {
     var vm = this;
-    
     vm.quiz = quiz;
 }]);
 
 app.controller('AnswersCtrl', ['quiz', function(quiz) {
     var vm = this;
     vm.quiz = quiz;
-    vm.quizNum = quiz.quizNum;
     vm.checkAnswer = function(thisBox) {
         if (thisBox.correct) {
             vm.quiz.score++;
-            vm.quiz.quizNum++;
-            console.log('Correct answer! Score: ' + vm.quiz.score);
+            vm.nextSound();
         } else {
-            console.log('Wrong Answer');
+            vm.nextSound();
         }
+    }
+    
+    vm.nextSound = function() {
+        vm.quiz.quizNum++;
     }
 }]);
 

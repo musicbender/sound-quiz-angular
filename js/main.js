@@ -1,86 +1,67 @@
-var app = angular.module('myApp', []);
+(function(){  
+    var app = angular.module('myApp', []);
 
-app.service('quiz', ['$http', function($http) {
-    var serv = this;
-    
-    serv.quizNum = 0;
-    serv.audioNum = 0;
-    serv.score = 0;
-    serv.inProgress = false;
-    serv.quizOver = false;
-    serv.quizData;
-    serv.box;
-    
-    $http.get('data/quiz.json').then(function(response) {
-        serv.quizData = response.data;
-        serv.box = serv.quizData.data[serv.quizNum];
-    });
-}]);
+    app.service('quiz', ['$http', function($http) {
+        var serv = this;
 
-app.controller('MainCtrl', ['$http', 'quiz', function($http, quiz) {
-    var vm = this;
-    
-    vm.quiz = quiz;
-}]);
+        serv.quizNum = 0;
+        serv.audioNum = 0;
+        serv.score = 0;
+        serv.inProgress = false;
+        serv.quizOver = false;
+        serv.quizData;
+        serv.box;
 
-app.controller('StartCtrl', ['quiz', function(quiz) {
-    var vm = this;
-    
-    vm.quiz = quiz;
-    vm.startQuiz = function() {
-        vm.quiz.inProgress = true;
-        console.log('TEST: start button clicked. ' + vm.quiz.inProgress);
-    }
+        $http.get('data/quiz.json').then(function(response) {
+            serv.quizData = response.data;
+            serv.box = serv.quizData.data[serv.quizNum];
+        });
+    }]);
 
-}]);
+    app.controller('MainCtrl', ['$http', 'quiz', function($http, quiz) {
+        var vm = this;
 
-app.controller('ScoreCtrl', ['quiz', function(quiz) {
-    var vm = this;
-    vm.quiz = quiz;
-}]);
-
-app.controller('AudioCtrl', ['quiz', function(quiz) {
-    var vm = this;
-    vm.quiz = quiz;
-}]);
-
-app.controller('AnswersCtrl', ['quiz', function(quiz) {
-    var vm = this;
-    vm.quiz = quiz;
-    vm.checkAnswer = function(thisBox) {
-        if (thisBox.correct) {
-            vm.quiz.score++;
-            vm.nextSound();
-        } else {
-            vm.nextSound();
+        vm.quiz = quiz;
+        vm.clicked = false;
+        vm.startQuiz = function() {
+            vm.quiz.inProgress = true;
+            console.log('TEST: start button clicked. ' + vm.quiz.inProgress);
         }
-    }
-    
-    vm.nextSound = function() {
-        vm.quiz.quizNum++;
-    }
-}]);
 
-app.directive('scoreSection', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'templates/score.html'
-    }
-});
+    }]);
 
-app.directive('audioSection', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'templates/audio.html'
-    }
-});
+    app.directive('scoreSection', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'templates/score.html'
+        }
+    });
 
-app.directive('answersSection', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'templates/answers.html'
-    }
-});
+    app.directive('audioSection', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'templates/audio.html'
+        }
+    });
 
+    app.directive('answersSection', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'templates/answers.html',
+            link: function(s, e, a) {
+                s.checkAnswer = function(thisBox) {
+                    s.clicked = true;
+                    s.nextSound();
+                    if (thisBox.correct) {
+                        vm.quiz.score++;
+                    } 
+                }
 
+                vm.nextSound = function() {
+                    vm.quiz.quizNum++;
+                }
+            }
+        }
+    });
+}());
 

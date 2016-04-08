@@ -30,17 +30,27 @@
 
     }]);
 
+    app.directive('startSection', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'templates/start.html',
+            replace: true
+        }
+    });
+    
     app.directive('scoreSection', function() {
         return {
             restrict: 'E',
-            templateUrl: 'templates/score.html'
+            templateUrl: 'templates/score.html',
+            replace: true
         }
     });
 
     app.directive('audioSection', function() {
         return {
             restrict: 'E',
-            templateUrl: 'templates/audio.html'
+            templateUrl: 'templates/audio.html',
+            replace: true
         }
     });
 
@@ -48,6 +58,7 @@
         return {
             restrict: 'E',
             templateUrl: 'templates/answers.html',
+            replace: true,
             link: function(s, e, a) {
                 s.checkAnswer = function(thisBox) {
                     s.clicked = true;

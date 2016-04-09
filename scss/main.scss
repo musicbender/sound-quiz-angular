@@ -86,7 +86,7 @@ audio {
 
 .start-btn {
     margin: 0 auto;
-    padding: 0;
+    padding: 4px;
     width: 20%;
     height: 100px;
     background: rgb(54, 25, 25);
@@ -160,4 +160,5 @@ h3 {
 
 /*******Media Queries*******/
 
+@import 'components/_animations.scss';
 @import 'media/_media-queries.scss';

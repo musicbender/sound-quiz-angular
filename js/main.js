@@ -3,25 +3,22 @@
 
     app.service('quiz', ['$http', function($http) {
         var serv = this;
-
-        serv.quizNum = 0;
-        serv.audioNum = 0;
-        serv.score = 0;
-        serv.inProgress = false;
-        serv.quizOver = false;
         serv.quizData;
-        serv.box;
-
+        
         $http.get('data/quiz.json').then(function(response) {
             serv.quizData = response.data;
-            serv.box = serv.quizData.data[serv.quizNum];
         });
     }]);
 
     app.controller('MainCtrl', ['$http', 'quiz', function($http, quiz) {
         var vm = this;
-
+        
         vm.quiz = quiz;
+        vm.quizNum = 0;
+        vm.audioNum = 0;
+        vm.score = 0;
+        vm.inProgress = false;
+        vm.quizOver = false;
         vm.clicked = false;
         vm.startQuiz = function() {
             vm.quiz.inProgress = true;
@@ -61,15 +58,16 @@
             replace: true,
             link: function(s, e, a) {
                 s.checkAnswer = function(thisBox) {
+                    console.log('checking answer...');
                     s.clicked = true;
                     s.nextSound();
                     if (thisBox.correct) {
-                        vm.quiz.score++;
+                        s.quiz.score++;
                     } 
                 }
 
-                vm.nextSound = function() {
-                    vm.quiz.quizNum++;
+                s.nextSound = function() {
+                    s.quiz.quizNum++;
                 }
             }
         }

@@ -1,18 +1,40 @@
-<div class="answers-sect">
-   <div class="row">
-       <div class="answer-box left" ng-click="checkAnswer(q.quiz.quizData.data[q.quiz.quizNum].box1)">
-           <p>{{ q.quiz.quizData.data[q.quiz.quizNum].box1.answer }}</p>
-       </div>
-       <div class="answer-box right" ng-click="checkAnswer(q.quiz.quizData.data[q.quiz.quizNum].box2)">
-           <p>{{ q.quiz.quizData.data[q.quiz.quizNum].box2.answer }}</p>
-       </div>
-   </div>
-   <div class="row">
-       <div class="answer-box left" ng-click="checkAnswer(q.quiz.quizData.data[q.quiz.quizNum].box3)">
-           <p>{{ q.quiz.quizData.data[q.quiz.quizNum].box3.answer }}</p>
-       </div>
-       <div class="answer-box right" ng-click="checkAnswer(q.quiz.quizData.data[q.quiz.quizNum].box4)">
-           <p>{{ q.quiz.quizData.data[q.quiz.quizNum].box4.answer }}</p>
-       </div>
-   </div>
+<div>
+    <div class="start" ng-hide="inProgress">
+        <div ng-click="startQuiz()" class="start-btn">
+            <h3>Start</h3>
+        </div>
+    </div>
+
+    <section class="quiz-container" ng-show="inProgress">
+        <div class="audio-div">
+            <audio ng-src="{{ quiz.quizData.data[quizNum].audio }}" type="audio/mp3" controls preload="auto" class="audio">
+               Your browser does not support this audio element
+            </audio>
+        </div>
+
+        <div class="score-div">
+            <h4 class="quiz-num-section">Sound <span class="quiz-num">{{ quizNum + 1 }}</span> out of 10</h4>
+            <h4 class="score-section"><span class="score-num">{{ score }}</span> out of 10 Correct</h4>
+        </div>
+
+
+        <div class="answers-sect">
+           <div class="row">
+               <div class="answer-box left" ng-click="checkAnswer(quiz.quizData.data[quizNum].box1)">
+                   <p>{{ quiz.quizData.data[quizNum].box1.answer }}</p>
+               </div>
+               <div class="answer-box right" ng-click="checkAnswer(quiz.quizData.data[quizNum].box2)">
+                   <p>{{ quiz.quizData.data[quizNum].box2.answer }}</p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="answer-box left" ng-click="checkAnswer(quiz.quizData.data[quizNum].box3)">
+                   <p>{{ quiz.quizData.data[quizNum].box3.answer }}</p>
+               </div>
+               <div class="answer-box right" ng-click="checkAnswer(quiz.quizData.data[quizNum].box4)">
+                   <p>{{ quiz.quizData.data[quizNum].box4.answer }}</p>
+               </div>
+           </div>
+        </div>
+    </section>
 </div>

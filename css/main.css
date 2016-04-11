@@ -40,6 +40,9 @@
   animation-duration: 2s;
   animation-fill-mode: forwards; }
 
+.quiz-over {
+  display: none; }
+
 /*******General*******/
 html,
 body {
@@ -166,6 +169,16 @@ h3 {
 .correct-reveal {
   background-color: darkgreen;
   color: #FFEF00; }
+
+/*******Final Results*******/
+.final-results {
+  margin: 80px auto;
+  text-align: center;
+  font-size: 4em;
+  font-family: "Raleway";
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
 
 /*******Media Queries*******/
 @media only screen and (max-width: 1200px) {

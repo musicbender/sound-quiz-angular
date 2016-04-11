@@ -162,6 +162,18 @@ h3 {
     color: $yellow;
 }
 
+/*******Final Results*******/
+
+.final-results {
+    margin: 80px auto;
+    text-align: center;
+    font-size: 4em;
+    font-family: $font-main;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
 /*******Media Queries*******/
 
 @import 'media/_media-queries.scss';

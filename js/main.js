@@ -25,29 +25,41 @@
                     s.quizNum = 0;
                     s.audioNum = 0;
                     s.score = 0;
+                    s.maxNum = quiz.quizData.data.length - 1;
                     s.state = function() {
                         return quiz.quizData.data[s.quizNum];
                     }
                 }
                 s.checkAnswer = function(thisBox) {
+                    console.log(s.maxNum);
                     s.clicked = true;
                     s.correct = thisBox.correct;
-                    console.log('click true');
                     if (s.correct) {
                         s.score++;
                     } 
+                    
                     $timeout(function() {
                         s.nextSound();
                     }, 1600);
+                    
+                    if (s.quizNum >= s.maxNum) {
+                        $timeout(function() {
+                            s.quizOver = true;
+                        }, 1600);
+                    }
                 }
                 s.nextSound = function() {
-                    s.clicked = false;
+                    if (s.quizNum < s.maxNum) {
+                        s.clicked = false;
+                    }
                     s.quizNum++;
-                    
                 }
                 s.getQuizNum = function() {
                     return s.quizNum;
                 } 
+                s.stopQuiz = function() {
+                    
+                }
             }
         }
     }]);

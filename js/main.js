@@ -46,6 +46,7 @@
                         $timeout(function() {
                             s.quizOver = true;
                         }, 1600);
+                        
                     }
                 }
                 s.nextSound = function() {

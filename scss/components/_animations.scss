@@ -2,31 +2,48 @@
     0% {
         background: rgb(54, 25, 25);
         background: rgba(54, 25, 25, .4);
+        opacity: 1;
+    }
+    50% {
+        background: rgb(54, 250, 20); 
+        background: rgba(54, 250, 20, .8); 
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
     }
     100% {
-        background: rgb(54, 255, 20); 
-        background: rgba(54, 255, 20, .8); 
+        background: rgb(54, 25, 25);
+        background: rgba(54, 25, 25, .4);
     }
 }
 
 @keyframes fall {
-  0% {
-    opacity: 1;
-    transform: rotateZ(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(600px) rotateZ(90deg);
-  }
+    0% {
+        opacity: 1;
+        transform: rotateZ(0);
+    }
+    99% {
+        opacity: 0;
+        transform: translateY(600px) rotateZ(90deg);
+    }
+    100% {
+        transform: translateY(0px) rotateZ(0deg);
+    }
 }
 
-.correct-animate{
+@keyframes fade-in {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.correct-animate.correct-animate-add {
     animation-name: fade-to-green;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
-.wrong-animate {
+.wrong-animate.wrong-animate-add {
     animation-name: fall;
     animation-duration: 2s;
     animation-fill-mode: forwards;

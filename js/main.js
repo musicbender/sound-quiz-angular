@@ -1,5 +1,5 @@
 (function(){  
-    var app = angular.module('myApp', []);
+    var app = angular.module('myApp', ['ngAnimate']);
 
     app.service('quiz', ['$http', function($http) {
         var serv = this;
@@ -9,7 +9,7 @@
         });
     }]);
     
-    app.directive('answersSection', ['quiz', function(quiz) {
+    app.directive('answersSection', ['quiz', '$timeout', function(quiz, $timeout) {
         return {
             restrict: 'E',
             templateUrl: 'templates/answers.html',
@@ -19,6 +19,7 @@
                 s.inProgress = false;
                 s.quizOver = false;
                 s.clicked = false;
+                
                 s.startQuiz = function() {
                     s.inProgress = true;
                     s.quizNum = 0;
@@ -27,31 +28,26 @@
                     s.state = function() {
                         return quiz.quizData.data[s.quizNum];
                     }
-                    console.log('TEST: start button clicked. ' + s.quizNum);
                 }
-                
                 s.checkAnswer = function(thisBox) {
                     s.clicked = true;
-                    s.nextSound();
-                    if (thisBox.correct) {
+                    s.correct = thisBox.correct;
+                    console.log('click true');
+                    if (s.correct) {
                         s.score++;
                     } 
-                    
-                    console.log('TEST: checking answer...' + s.quizNum);
+                    $timeout(function() {
+                        s.nextSound();
+                    }, 1600);
                 }
-
                 s.nextSound = function() {
+                    s.clicked = false;
                     s.quizNum++;
-                    console.log('TEST: next quiz number: ' + s.getQuizNum());
+                    
                 }
-                
                 s.getQuizNum = function() {
                     return s.quizNum;
-                }
-                
-                s.getBox = function() {
-                    return s.quiz.quizData.data[quizNum];
-                }
+                } 
             }
         }
     }]);

@@ -2,6 +2,7 @@
 
 @import 'helpers/_variables.scss';
 @import 'helpers/_placeholders.scss';
+@import 'components/_animations.scss';
 
 /*******General*******/
 
@@ -130,6 +131,9 @@ h3 {
     vertical-align: middle;
     background: rgb(54, 25, 25);
     background: rgba(54, 25, 25, .4);
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
     &:hover {
         @extend %box-trans;
         background-color: black;
@@ -160,5 +164,4 @@ h3 {
 
 /*******Media Queries*******/
 
-@import 'components/_animations.scss';
 @import 'media/_media-queries.scss';

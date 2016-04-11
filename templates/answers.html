@@ -22,15 +22,15 @@
                <div class="answer-box left" ng-click="checkAnswer(state().box1)" ng-class="{'wrong-animate': clicked && !state().box1.correct, 'correct-animate': clicked && state().box1.correct}">
                    <p>{{ state().box1.answer }}</p>
                </div>
-               <div class="answer-box right" ng-click="checkAnswer(state().box2)">
+               <div class="answer-box right" ng-click="checkAnswer(state().box2)" ng-class="{'wrong-animate': clicked && !state().box2.correct, 'correct-animate': clicked && state().box2.correct}">
                    <p>{{ state().box2.answer }}</p>
                </div>
            </div>
            <div class="row">
-               <div class="answer-box left" ng-click="checkAnswer(state().box3)">
+               <div class="answer-box left" ng-click="checkAnswer(state().box3)" ng-class="{'wrong-animate': clicked && !state().box3.correct, 'correct-animate': clicked && state().box3.correct}">
                    <p>{{ state().box3.answer }}</p>
                </div>
-               <div class="answer-box right" ng-click="checkAnswer(state().box4)">
+               <div class="answer-box right" ng-click="checkAnswer(state().box4)" ng-class="{'wrong-animate': clicked && !state().box4.correct, 'correct-animate': clicked && state().box4.correct}">
                    <p>{{ state().box4.answer }}</p>
                </div>
            </div>

@@ -25,7 +25,8 @@
                     s.quizNum = 0;
                     s.audioNum = 0;
                     s.score = 0;
-                    s.maxNum = quiz.quizData.data.length - 1;
+                    s.audio = document.getElementById("audio");
+                    s.maxNum = quiz.quizData.data.length - 8;
                     s.state = function() {
                         return quiz.quizData.data[s.quizNum];
                     }
@@ -45,8 +46,8 @@
                     if (s.quizNum >= s.maxNum) {
                         $timeout(function() {
                             s.quizOver = true;
+                            s.audio.pause();
                         }, 1600);
-                        
                     }
                 }
                 s.nextSound = function() {
@@ -58,9 +59,6 @@
                 s.getQuizNum = function() {
                     return s.quizNum;
                 } 
-                s.stopQuiz = function() {
-                    
-                }
             }
         }
     }]);

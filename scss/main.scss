@@ -2,6 +2,7 @@
 
 @import 'helpers/_variables.scss';
 @import 'helpers/_placeholders.scss';
+@import 'helpers/_mixins.scss';
 @import 'components/_animations.scss';
 
 /*******General*******/
@@ -161,9 +162,11 @@ h3 {
     text-align: center;
     font-size: 4em;
     font-family: $font-main;
-    animation-name: fade-in-delayed;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    @include animate(fade-in-delayed, 4s);
+}
+
+.quiz-over {
+    display: none;
 }
 
 /*******Media Queries*******/

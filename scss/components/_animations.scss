@@ -1,20 +1,17 @@
 @keyframes fade-to-green {
     0% {
-        background: rgb(54, 25, 25);
-        background: rgba(54, 25, 25, .4);
+        @extend %answer-yellow;
         opacity: 1;
     }
     50% {
-        background: rgb(54, 250, 20); 
-        background: rgba(54, 250, 20, .8); 
+        @extend %correct-green;
         opacity: 1;
     }
     99% {
         opacity: 0;
     }
     100% {
-        background: rgb(54, 25, 25);
-        background: rgba(54, 25, 25, .4);
+        @extend %answer-yellow;
     }
 }
 
@@ -49,18 +46,17 @@
 }
 
 .correct-animate.correct-animate-add {
-    animation-name: fade-to-green;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    @include animate(fade-to-green, 2s);
 }
 
 .wrong-animate.wrong-animate-add {
-    animation-name: fall;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    @include animate(fall, 2s);
 }
 
-.quiz-over {
-    display: none;
+.score-div.ng-hide {
+    @include animate(fade-out, 2s);
 }
 
+.audio-div.ng-hide {
+    @include animate(fade-out, 2s);
+}

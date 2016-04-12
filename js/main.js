@@ -25,19 +25,18 @@
                     s.quizNum = 0;
                     s.audioNum = 0;
                     s.score = 0;
-                    s.audio = document.getElementById("audio");
-                    s.maxNum = quiz.quizData.data.length - 8;
+                    s.maxNum = quiz.quizData.data.length - 1;
                     s.state = function() {
                         return quiz.quizData.data[s.quizNum];
                     }
                 }
+                
                 s.checkAnswer = function(thisBox) {
                     console.log(s.maxNum);
                     s.clicked = true;
                     s.correct = thisBox.correct;
-                    if (s.correct) {
-                        s.score++;
-                    } 
+                    
+                    if (s.correct) { s.score++; } 
                     
                     $timeout(function() {
                         s.nextSound();
@@ -46,16 +45,15 @@
                     if (s.quizNum >= s.maxNum) {
                         $timeout(function() {
                             s.quizOver = true;
-                            s.audio.pause();
                         }, 1600);
                     }
                 }
+                
                 s.nextSound = function() {
-                    if (s.quizNum < s.maxNum) {
-                        s.clicked = false;
-                    }
+                    if (s.quizNum < s.maxNum) { s.clicked = false; }
                     s.quizNum++;
                 }
+                
                 s.getQuizNum = function() {
                     return s.quizNum;
                 } 

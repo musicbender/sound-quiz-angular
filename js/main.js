@@ -40,7 +40,7 @@
                     
                     $timeout(function() {
                         s.nextSound();
-                    }, 1600);
+                    }, 1000);
                     
                     if (s.quizNum >= s.maxNum) {
                         $timeout(function() {

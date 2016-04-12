@@ -22,7 +22,7 @@ header {
     padding: 1px 0 0 0;
     width: 50%;
     height: 125px;
-    background-color: black;
+    background-color: $black;
     text-align: center;
     vertical-align: middle;
 }
@@ -88,15 +88,14 @@ audio {
     padding: 4px;
     width: 20%;
     height: 100px;
-    background: rgb(54, 25, 25);
-    background: rgba(54, 25, 25, .4);
+    @include background(54, 25, 25, .5);
     font-family: $font-main;
     font-size: 2em;
 }
 
 .start-btn:hover {
     @extend %box-trans;
-    background-color: black;
+    background-color: $black;
     color: $yellow;
     cursor: pointer;
 }
@@ -128,14 +127,11 @@ h3 {
     width: 47%;
     height: 100px;
     vertical-align: middle;
-    background: rgb(54, 25, 25);
-    background: rgba(54, 25, 25, .4);
-    animation-name: fade-in;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    @include background(54, 25, 25, .5);
+    @include animate(fade-in, 2s);
     &:hover {
         @extend %box-trans;
-        background-color: black;
+        background-color: $black;
         color: $yellow;
         cursor: pointer;
     }

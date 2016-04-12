@@ -3,3 +3,8 @@
     animation-duration: $time;
     animation-fill-mode: forwards;
 }
+
+@mixin background($a, $b, $c, $d) {
+    background: rgb($a, $b, $c);
+        background: rgba($a, $b, $c, $d);
+}

@@ -1,27 +1,27 @@
 @keyframes fade-to-green {
     0% {
-        background: rgb(54, 25, 25);
-        background: rgba(54, 25, 25, .4);
+        @include background(54, 25, 25, .5);
         opacity: 1;
     }
     50% {
-        background: rgb(0, 100, 13); 
-        background: rgba(0, 100, 13, .8); 
-        color: white;
+        @include background(0, 100, 13, .5); 
         opacity: 1;
+    }
+    90% {
+        @include background(0, 100, 13, 0); 
+        opacity: 0;
     }
     99% {
         opacity: 0;
     }
     100% {
-        background: rgb(54, 25, 25);
-        background: rgba(54, 25, 25, .4);
-        color: $yellow;
+        @include background(54, 25, 25, .5);
     }
 }
 
 @keyframes fall {
     0% {
+        @include background(207, 33, 0, .5);
         opacity: 1;
         transform: rotateZ(0);
     }
@@ -30,6 +30,7 @@
         transform: translateY(600px) rotateZ(90deg);
     }
     100% {
+        @include background(54, 25, 25, .5);
         transform: translateY(0px) rotateZ(0deg);
     }
 }
@@ -48,6 +49,10 @@
 @keyframes fade-out {
     0% {opacity: 1;}
     100% {opacity: 0;}
+}
+
+.quiz-container {
+    @include animate(fade-in, 1s);
 }
 
 .correct-animate.correct-animate-add {

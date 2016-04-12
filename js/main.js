@@ -60,31 +60,5 @@
             }
         }
     }]);
-
-//    app.directive('startSection', function() {
-//        return {
-//            restrict: 'E',
-//            templateUrl: 'templates/start.html',
-//            replace: true
-//        }
-//    });
-//    
-//    app.directive('scoreSection', function() {
-//        return {
-//            restrict: 'E',
-//            templateUrl: 'templates/score.html',
-//            replace: true
-//        }
-//    });
-
-//    app.directive('audioSection', function() {
-//        return {
-//            restrict: 'E',
-//            templateUrl: 'templates/audio.html',
-//            replace: true
-//        }
-//    });
-
-    
 }());
 

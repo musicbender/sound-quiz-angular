@@ -145,7 +145,8 @@ audio {
 
 h3 {
   margin: 32px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  line-height: 37px; }
 
 /*******Answers Section*******/
 .answers-sect {

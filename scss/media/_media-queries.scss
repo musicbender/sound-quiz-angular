@@ -62,24 +62,23 @@
     h1 {
         font-size: 2em;
     }
+    .score-sect {
+        font-size: 0.76em;
+    }
     .answer-box p {
         font-size: 0.75em;
     }
 }
 
 @media only screen and (max-width: 375px) {
-    .progress {
-        font-size: 0.75em;
+    .score-sect {
+        font-size: 0.6em;
     }
     .answer-box {
         width: 46%;
     }
-    
     .answer-box p {
         font-size: 1em;
-    }
-    .score-end {
-        margin-right: -235px;
     }
 }
 

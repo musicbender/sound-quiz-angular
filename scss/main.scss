@@ -91,7 +91,7 @@ audio {
     padding: 4px;
     width: 20%;
     height: 100px;
-    @include background(54, 25, 25, .5);
+    @include background(54, 25, 25, .4);
     font-family: $font-main;
     font-size: 2em;
 }
@@ -130,7 +130,7 @@ h3 {
     width: 47%;
     height: 100px;
     vertical-align: middle;
-    @include background(54, 25, 25, .5);
+    @include background(54, 25, 25, .4);
     @include animate(fade-in, 2s);
     &:hover {
         @extend %box-trans;

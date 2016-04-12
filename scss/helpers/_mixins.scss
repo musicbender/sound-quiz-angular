@@ -6,5 +6,5 @@
 
 @mixin background($a, $b, $c, $d) {
     background: rgb($a, $b, $c);
-        background: rgba($a, $b, $c, $d);
+    background: rgba($a, $b, $c, $d);
 }

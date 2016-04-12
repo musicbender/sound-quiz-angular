@@ -5,11 +5,11 @@
 @keyframes fade-to-green {
   0% {
     background: #361919;
-    background: rgba(54, 25, 25, 0.5);
+    background: rgba(54, 25, 25, 0.4);
     opacity: 1; }
   50% {
     background: #00640d;
-    background: rgba(0, 100, 13, 0.5);
+    background: rgba(0, 100, 13, 0.4);
     opacity: 1; }
   90% {
     background: #00640d;
@@ -19,11 +19,11 @@
     opacity: 0; }
   100% {
     background: #361919;
-    background: rgba(54, 25, 25, 0.5); } }
+    background: rgba(54, 25, 25, 0.4); } }
 @keyframes fall {
   0% {
     background: #cf2100;
-    background: rgba(207, 33, 0, 0.5);
+    background: rgba(207, 33, 0, 0.4);
     opacity: 1;
     transform: rotateZ(0); }
   99% {
@@ -31,7 +31,7 @@
     transform: translateY(600px) rotateZ(90deg); }
   100% {
     background: #361919;
-    background: rgba(54, 25, 25, 0.5);
+    background: rgba(54, 25, 25, 0.4);
     transform: translateY(0px) rotateZ(0deg); } }
 @keyframes fade-in {
   0% {
@@ -148,7 +148,7 @@ audio {
   width: 20%;
   height: 100px;
   background: #361919;
-  background: rgba(54, 25, 25, 0.5);
+  background: rgba(54, 25, 25, 0.4);
   font-family: "Raleway";
   font-size: 2em; }
 
@@ -181,7 +181,7 @@ h3 {
   height: 100px;
   vertical-align: middle;
   background: #361919;
-  background: rgba(54, 25, 25, 0.5);
+  background: rgba(54, 25, 25, 0.4);
   animation-name: fade-in;
   animation-duration: 2s;
   animation-fill-mode: forwards; }

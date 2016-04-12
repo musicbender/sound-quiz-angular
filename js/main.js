@@ -9,10 +9,10 @@
         });
     }]);
     
-    app.directive('answersSection', ['quiz', '$timeout', function(quiz, $timeout) {
+    app.directive('quizSection', ['quiz', '$timeout', function(quiz, $timeout) {
         return {
             restrict: 'E',
-            templateUrl: 'templates/answers.html',
+            templateUrl: 'templates/quiz.html',
             replace: true,
             link: function(s, e, a) {
                 s.quiz = quiz;

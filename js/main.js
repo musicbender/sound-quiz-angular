@@ -25,7 +25,7 @@
                     s.quizNum = 0;
                     s.audioNum = 0;
                     s.score = 0;
-                    s.maxNum = quiz.quizData.data.length - 10;
+                    s.maxNum = quiz.quizData.data.length - 1;
                     s.state = function() {
                         return quiz.quizData.data[s.quizNum];
                     }

@@ -1,17 +1,22 @@
 @keyframes fade-to-green {
     0% {
-        @extend %answer-yellow;
+        background: rgb(54, 25, 25);
+        background: rgba(54, 25, 25, .4);
         opacity: 1;
     }
     50% {
-        @extend %correct-green;
+        background: rgb(0, 100, 13); 
+        background: rgba(0, 100, 13, .8); 
+        color: white;
         opacity: 1;
     }
     99% {
         opacity: 0;
     }
     100% {
-        @extend %answer-yellow;
+        background: rgb(54, 25, 25);
+        background: rgba(54, 25, 25, .4);
+        color: $yellow;
     }
 }
 

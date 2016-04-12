@@ -15,14 +15,17 @@
     h1 {
         margin: 15px auto;
     }
-    .progress {
+    .quiz-container {
         width: 80%;
     }
-    .audio-section {
-        width: 80%;
+    .score-sect {
+        width: 100%;
     }
-    .answers {
-        width: 80%;
+    .audio-sect {
+        width: 100%;
+    }
+    .answers-sect {
+        width: 100%;
     }
     .start-btn {
         width: 80%;
@@ -32,12 +35,22 @@
     }
 }
 
+@media only screen and (max-width: 750px) {
+    .answer-box p {
+        font-size: 1.1em;
+        line-height: 60px;
+    }
+}
+
 @media only screen and (max-width: 550px) {
     h1 {
         font-size: 2em;
     }
     .row {
         height: 110px;
+    }
+    .answer-box p {
+        line-height: 25px;
     }
 
 }
@@ -50,7 +63,7 @@
         font-size: 2em;
     }
     .answer-box p {
-        font-size: 1.33em;
+        font-size: 1em;
     }
 }
 

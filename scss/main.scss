@@ -34,9 +34,12 @@ h1 {
     font-family: $font-title;
 }
 
+.quiz-container {
+    margin: 0 auto;
+}
 /*******Progress Section*******/
 
-.score-div {
+.score-sect {
     margin: 0px auto;
     padding: 0;
     width: 50%;
@@ -62,7 +65,7 @@ h1 {
 
 /*******Audio Section*******/
 
-.audio-div {
+.audio-sect {
     margin: 0 auto;
     width: 50%;
     height: 66px;

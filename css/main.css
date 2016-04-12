@@ -99,8 +99,11 @@ h1 {
   color: #FFEF00;
   font-family: "Russo One"; }
 
+.quiz-container {
+  margin: 0 auto; }
+
 /*******Progress Section*******/
-.score-div {
+.score-sect {
   margin: 0px auto;
   padding: 0;
   width: 50%;
@@ -122,7 +125,7 @@ h1 {
   float: right; }
 
 /*******Audio Section*******/
-.audio-div {
+.audio-sect {
   margin: 0 auto;
   width: 50%;
   height: 66px;
@@ -227,26 +230,36 @@ h3 {
   h1 {
     margin: 15px auto; }
 
-  .progress {
+  .quiz-container {
     width: 80%; }
 
-  .audio-section {
-    width: 80%; }
+  .score-sect {
+    width: 100%; }
 
-  .answers {
-    width: 80%; }
+  .audio-sect {
+    width: 100%; }
+
+  .answers-sect {
+    width: 100%; }
 
   .start-btn {
     width: 80%; }
 
   footer {
     display: none; } }
+@media only screen and (max-width: 750px) {
+  .answer-box p {
+    font-size: 1.1em;
+    line-height: 60px; } }
 @media only screen and (max-width: 550px) {
   h1 {
     font-size: 2em; }
 
   .row {
-    height: 110px; } }
+    height: 110px; }
+
+  .answer-box p {
+    line-height: 25px; } }
 @media only screen and (max-width: 450px) {
   header {
     height: 100px; }
@@ -255,7 +268,7 @@ h3 {
     font-size: 2em; }
 
   .answer-box p {
-    font-size: 1.33em; } }
+    font-size: 1em; } }
 @media only screen and (max-width: 375px) {
   .progress {
     font-size: 0.8em; }

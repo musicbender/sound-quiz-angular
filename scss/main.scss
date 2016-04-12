@@ -159,10 +159,14 @@ h3 {
 
 .final-results {
     margin: 80px auto;
+    width: 100%;
     text-align: center;
-    font-size: 4em;
-    font-family: $font-main;
     @include animate(fade-in-delayed, 4s);
+}
+
+.final-text {
+    font-family: $font-main;
+    font-size: 4em;
 }
 
 .quiz-over {
